@@ -1,0 +1,25 @@
+{% if template contais 'page.about-us' %}
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ shop.name }}",
+      "url": "{{ shop.url }}",
+      "image": "{{ shop.logo | default: shop.url | append: '/logo.png' }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ shop.address.street }}",
+        "addressLocality": "{{ shop.address.city }}",
+        "addressRegion": "{{ shop.address.province }}",
+        "postalCode": "{{ shop.address.zip }}",
+        "addressCountry": "{{ shop.address.country }}"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{ shop.phone }}",
+        "email": "{{ shop.email }}",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+{% endif %}    

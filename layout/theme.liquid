@@ -117,6 +117,7 @@
 	{% if settings.breadcrumbs_enabled %}
 		{% render 'breadcrumb' %}
 	{% endif %}
+	{% render 'structured-data-json' %}
 
 	{{ content_for_layout }}
 </main>
