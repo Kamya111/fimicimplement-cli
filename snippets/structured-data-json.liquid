@@ -1,11 +1,10 @@
-{% if template contais 'page.about-us' %}
+{% if template contains 'page.about-us' %}
 <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Organization",
       "name": "{{ shop.name }}",
       "url": "{{ shop.url }}",
-      "image": "{{ shop.logo | default: shop.url | append: '/logo.png' }}",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "{{ shop.address.street }}",
