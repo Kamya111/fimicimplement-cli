@@ -1,9 +1,32 @@
-{% if template contains 'page.about-us' %}
 <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "{{ shop.name }}",
+    "url": "{{ shop.url }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ shop.address.street }}",
+      "addressLocality": "{{ shop.address.city }}",
+      "addressRegion": "{{ shop.address.province }}",
+      "postalCode": "{{ shop.address.zip }}",
+      "addressCountry": "{{ shop.address.country }}"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{ shop.phone }}",
+      "email": "{{ shop.email }}",
+      "contactType": "customer service"
+    }
+  }
+</script>
+{% if template contains 'page.about-us' %}
+  <script type="application/ld+json">
     {
       "@context": "http://schema.org",
-      "@type": "Organization",
+      "@type": "{{ page.title }}",
       "name": "{{ shop.name }}",
+      "description": "FIMIC, LLC. It started with a simple yet ambitious goal: reshaping the agricultural equipment distribution market. We began our journey in 2017, driven by a vision, powered by expertise, and operating out of a modest 5,000-square-foot warehouse.",
       "url": "{{ shop.url }}",
       "address": {
         "@type": "PostalAddress",
@@ -20,5 +43,5 @@
         "contactType": "customer service"
       }
     }
-    </script>
-{% endif %}    
+  </script>
+{% endif %}
