@@ -127,6 +127,27 @@
 	<script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
+{% if template == 'page.faq' %}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for block in section.blocks %}
+      {
+        "@type": "Question",
+        "name": "{{ block.settings.heading | escape }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ block.settings.text | strip_html | escape }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+{% endif %}
+  
 {% schema %}
 {
   "name": "t:sections.expandable.name",
