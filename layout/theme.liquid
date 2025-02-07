@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+<head>
+ {%- render 'ecom_header' -%}
+	<meta charset="utf-8">
+
+	<title>
+		{{ page_title }}
+		{%- if current_tags %} &ndash; {% assign page_tags = current_tags | join: ', ' %}{{ 'accessibility.page_title.tagged_as' | t: tags: page_tags }}{% endif -%}
+		{%- if current_page != 1 %} &ndash; {{ 'accessibility.page_title.page_number' | t: page_number: current_page }}{% endif -%}
+		{%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+	</title>
+
+	{% if page_description %}
+		<meta name="description" content="{{ page_description | escape }}">
+	{% endif %}
+
+	{% render 'meta-tags' %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="sPrp4zIEvnYlpGS21rAtb3DF0shuUgdbppuVhRQHbJY" />
+
+    
+	<link rel="canonical" href="{{ canonical_url }}">
+
+	<link rel="preconnect" href="//cdn.shopify.com" crossorigin>
+
+	{% unless settings.typography_headings.system? and settings.typography_body.system? %}
+		<link rel="preconnect" href="//fonts.shopifycdn.com" crossorigin>
+	{% endunless %}
+
+	{% comment %}theme-check-disable AssetPreload{% endcomment %}
+	{% unless settings.typography_body.system? %}
+		<link rel="preload" as="font" href="{{ settings.typography_body | font_url }}" type="font/woff2" crossorigin>
+	{% endunless %}
+	{% unless settings.typography_headings.system? %}
+		<link rel="preload" as="font" href="{{ settings.typography_headings | font_url }}" type="font/woff2" crossorigin>
+	{% endunless %}
+	{% comment %}theme-check-enable AssetPreload{% endcomment %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-719192039"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-719192039');
+    </script>
+	{% render 'head-css' %}
+
+	{{ 'base.css' | asset_url | stylesheet_tag }}
+	{{ 'kiks-custom.css' | asset_url | stylesheet_tag }}
+    <style>
+      {% if settings.headings_uppercase %}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5{text-transform:uppercase;}{% endif %}
+       {% if settings.buttons_uppercase %}.kik_collection_info a{text-transform:uppercase;}{% endif %}
+      .button{ {% if settings.buttons_uppercase %}text-transform:uppercase;{% endif %}font-size:{{settings.button_font_size_desk}}px;line-height:1.5;}
+       {% if settings.product-card-outline %}.card.card-product{box-shadow: inset 0 0 0 .5px #5D5E5F!important;}{% else %}.card.card-product{box-shadow: unset!important;}{% endif %}
+       {% if settings.show_star_ratings %}{% else %}.star-rating-link{display:none;}{% endif %}
+        .card-product .card-heading{font-size:{{settings.card-title-font-size}}px!important;line-height:1.5;{% if settings.card-title-uppercase %}text-transform:uppercase;{% else %}text-transform:capitalize;{% endif %}}
+        .card .badge-stock {line-height:1.2;font-size:{{settings.card-stock-font-size}}px;color:{{ settings.card-stock-color }}!important}
+      .card .badge-stock-icon{background: repeating-linear-gradient(to bottom, {{ settings.card-stock-color }}, {{ settings.card-stock-color }} 2px, rgb(var(--color-background)) 2px, rgb(var(--color-background)) 4px)!important;}
+        .card-product .price-regular .price-item-regular, .card-product .price-item-sale {font-size: {{settings.card-price-font-size}}px!important;line-height:1.5;}
+        .star-rating-link{color:#3b3b3b!important}.card-media,.card-simple .card-media img{border-radius:0!important}#MainContent .button{position:relative;overflow:hidden;background:0 0;border:unset}#MainContent .button:before{content:"";position:absolute;top:0;height:100%;width:130%;left:-15%;background:rgb(var(--color-button));z-index:-1;transform:skew(30deg);transition:transform .5s cubic-bezier(.33, 0, 0, 1)}
+     #MainContent .button:after{content: "";position: absolute;top: 0;left: 0;width: 100%;z-index:-2;height: 100%;background-color:{{settings.colors_hover_button_background}};}
+      #MainContent .button.color-button-button-secondary:after{background-color:{{settings.sec_colors_hover_button_background}};}
+     #MainContent .button:hover:before{transform: translate3d(100%,0,0);}
+      #qikify-stickycart-v2-app{position: relative;z-index: 22;}
+      @media (max-width:749px){.button{font-size:{{settings.button_font_size_mobile}}px}}
+    </style>
+	<script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+	<script src="{{ 'scripts.js' | asset_url }}" defer="defer"></script>
+
+	{% if settings.favicon != blank %}
+		<link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+	{% endif %}
+
+	{{ content_for_header }}
+
+	<script>
+		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+		if (Shopify.designMode) {
+			document.documentElement.classList.add('shopify-design-mode');
+		}
+	</script>
+
+	{%- if request.design_mode -%}
+		{{ 'section-slideshow.css' | asset_url | stylesheet_tag }}
+		{{ 'section-video-modal.css' | asset_url | stylesheet_tag }}
+		{{ 'flickity.css' | asset_url | stylesheet_tag }}
+		{{ 'component-scroller.css' | asset_url | stylesheet_tag }}
+		{{ 'theme-editor.css' | asset_url | stylesheet_tag }}
+		<script src="{{ 'flickity.pkgd.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'carousel-slider.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'map.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'rich-text.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'video-modal.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'image-hotspots.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'popup-overlay.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'text-slider.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'recipient-form.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'product-request-information.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'video-background.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'scrolling-elements.js' | asset_url }}" defer="defer"></script>
+		<script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+	{%- endif -%}
+</head>
+
+<body class="template-{{ template.name }} setting-buttons-{{ settings.buttons_style }}">
+
+<a class="skip-link visually-hidden visually-hidden-focusable" href="#MainContent">{{ 'accessibility.link_messages.skip_to_text' | t }}</a>
+
+{% sections 'header-group' %}
+
+<main id="MainContent" class="main focus-none" role="main" tabindex="-1">
+	{% if settings.breadcrumbs_enabled %}
+		{% render 'breadcrumb' %}
+	{% endif %}
+
+	{{ content_for_layout }}
+</main>
+
+<footer class="footer">
+	{% sections 'footer-group' %}
+</footer>
+
+{% sections 'overlays-group' %}
+
+{%- if settings.predictive_search_enabled -%}
+	<script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{%- render "ecom_footer"-%}
+<script src="{{ 'kiks-custom.js' | asset_url }}" defer="defer"></script>
+</body>
+</html>

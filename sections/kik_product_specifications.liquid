@@ -1,0 +1,186 @@
+{% if product.metafields.custom.descriptions != blank or product.metafields.custom.specifications != blank or product.metafields.custom.more_specs != blank or product.metafields.custom.shipping_and_returns != blank or product.metafields.custom.warranty != blank %}
+<style>
+.kik_specifications{margin-top:64px}.specifications_top{margin-bottom:32px;display:flex;column-gap:28px;align-items:center}.spec_top_item{padding-top:16px;display:flex;align-items:center;column-gap:8px;color:#999;font-size:16px;line-height:1.5;font-weight:700;cursor:pointer}.spec_top_item span{display:flex}.spec_top_item.active{border-top:4px solid rgb(var(--color-accent-1));color:rgb(var(--color-accent-1))}.specifications_bottom{padding:24px;background:#f7f8f9}.item_desc #tab-2,.item_desc #tab-3,.item_spec #tab-1,.item_spec #tab-3,.spec_bottom_item,.spec_bottom_item .tabs{display:none}.spec_bottom_item.active{display:block}.spec_bottom_item p{color:#6b6b6b;font-size:16px;line-height:1.5}.spec_bottom_item p a{color:#ca141c}@media (max-width:990px){.spec_bottom_item p,.spec_top_item{font-size:14px}.specifications_top{overflow:scroll;-ms-overflow-style:none;scrollbar-width:none}.specifications_top::-webkit-scrollbar{display:none}.spec_top_item span{white-space:nowrap}.specifications_bottom{padding:16px}.kik_specifications{margin-top:20px}}
+</style>
+<div class="kik_specifications">
+  <div class="container">
+    {% assign data_product = false %}
+    <div class="specifications_top">
+      {% if product.metafields.custom.descriptions != blank %}
+           <div class="spec_top_item active" data-spec='1'>
+            <span>
+             {{ section.settings.desc_icon }}
+            </span>
+            <span>
+              {{ section.settings.desc_title }}
+            </span>
+          </div>
+        {% assign data_product = true %}
+      {% endif %}
+     {% if product.metafields.custom.specifications != blank %}
+         <div class="spec_top_item {% if data_product == false %} active{% endif %}" data-spec='2'>
+            <span>
+              {{ section.settings.specifications_icon }}
+            </span>
+            <span>
+             {{ section.settings.specifications_title }}
+            </span>
+          </div> 
+       {% assign data_product = true %}
+      {% endif %}
+        {% if product.metafields.custom.more_specs != blank %}
+         <div class="spec_top_item {% if data_product == false %} active{% endif %}" data-spec='3'>
+            <span>
+              {{ section.settings.specs_icon }}
+            </span>
+            <span>
+             {{ section.settings.specs_title }}
+            </span>
+          </div> 
+          {% assign data_product = true %}
+      {% endif %}
+      {% if product.metafields.custom.shipping_and_returns != blank %}
+         <div class="spec_top_item {% if data_product == false %} active{% endif %}" data-spec='4'>
+            <span>
+              {{ section.settings.shipping_icon }}
+            </span>
+            <span>
+             {{ section.settings.shipping_title }}
+            </span>
+          </div> 
+        {% assign data_product = true %}
+      {% endif %}
+       {% if product.metafields.custom.warranty != blank %}
+         <div class="spec_top_item {% if data_product == false %} active{% endif %}" data-spec='5'>
+            <span>
+             {{  section.settings.warranty_icon }}
+            </span>
+            <span>
+             {{ section.settings.warranty_title }}
+            </span>
+          </div> 
+      {% endif %}
+      {% comment %}
+      {% for block in section.blocks %}
+          <div class="spec_top_item {% if forloop.first %} active{% endif %}" data-spec='{{ forloop.index }}'>
+            <span>
+              {{ block.settings.icon }}
+            </span>
+            <span>
+              {{ block.settings.title }}
+            </span>
+          </div>
+      {% endfor %}
+      {% endcomment %}
+    </div>
+    {% assign data_product = false %}
+    <div class="specifications_bottom">
+      {% if product.metafields.custom.descriptions != blank %}
+            <div class="spec_bottom_item item_desc active" data-spec='1'>
+                <div>{{ product.metafields.custom.descriptions | metafield_tag }}</div>
+              </div>
+        {% assign data_product = true %}
+      {% endif %}
+      {% if product.metafields.custom.specifications != blank %}
+           <div class="spec_bottom_item item_spec {% if data_product == false %} active{% endif %}" data-spec='2'>
+                <div>{{ product.metafields.custom.specifications | metafield_tag }}</div>
+              </div>
+        {% assign data_product = true %}
+      {% endif %}
+       {% if product.metafields.custom.more_specs != blank %}
+           <div class="spec_bottom_item item_spec {% if data_product == false %} active{% endif %}" data-spec='3'>
+                <div>{{ product.metafields.custom.more_specs | metafield_tag }}</div>
+              </div>
+         {% assign data_product = true %}
+      {% endif %}
+            {% if product.metafields.custom.shipping_and_returns != blank %}
+           <div class="spec_bottom_item item_spec {% if data_product == false %} active{% endif %}" data-spec='4'>
+                <div>{{ product.metafields.custom.shipping_and_returns }}</div>
+            </div>
+              {% assign data_product = true %}
+      {% endif %}
+                {% if product.metafields.custom.warranty != blank %}
+           <div class="spec_bottom_item item_spec {% if data_product == false %} active{% endif %}" data-spec='5'>
+                <div>{{ product.metafields.custom.warranty }}</div>
+            </div>
+      {% endif %}
+      {% comment %}
+      {% for block in section.blocks %}
+         
+      {% endfor %}
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+<script defer>
+document.querySelectorAll(".spec_top_item").forEach(function(e){e.addEventListener("click",function(){document.querySelectorAll(".spec_top_item").forEach(function(e){e.classList.remove("active")}),document.querySelectorAll(".spec_bottom_item").forEach(function(e){e.classList.remove("active")}),e.classList.add("active"),document.querySelector(".spec_bottom_item[data-spec='"+e.getAttribute("data-spec")+"']").classList.add("active")})});
+</script>
+  {% endif %}
+{% schema %}
+{
+  "name": "kik product specification",
+  "tag": "section",
+    "settings": [
+   {
+      "type": "textarea",
+      "id": "desc_icon",
+      "label": "description icon svg "
+    },
+         {
+      "type": "text",
+      "id": "desc_title",
+      "label": "description title",
+           "default":"Descriptions"
+    },
+         {
+      "type": "textarea",
+      "id": "specifications_icon",
+      "label": "specification icon svg "
+    },
+         {
+      "type": "text",
+      "id": "specifications_title",
+      "label": "specification title",
+           "default":"Specifications"
+    },
+            {
+      "type": "textarea",
+      "id": "specs_icon",
+      "label": "specs icon svg "
+    },
+         {
+      "type": "text",
+      "id": "specs_title",
+      "label": "specs title",
+           "default":"More Specs"
+    },
+                  {
+      "type": "textarea",
+      "id": "shipping_icon",
+      "label": "shipping icon svg "
+    },
+         {
+      "type": "text",
+      "id": "shipping_title",
+      "label": "shipping title",
+           "default":"Shipping and Returns"
+    },
+                    {
+      "type": "textarea",
+      "id": "warranty_icon",
+      "label": "warranty icon svg "
+    },
+         {
+      "type": "text",
+      "id": "warranty_title",
+      "label": "warranty title",
+           "default":"Warranty"
+    },
+  ],
+  "presets": [
+    {
+      "name": "kik product specification"
+    }
+  ]
+}
+{% endschema %}

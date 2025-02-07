@@ -1,0 +1,109 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide_heading": false
+      }
+    },
+    "slideshow_G4ffzj": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_FhYwUH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/michal-robak-bBGbx_wH_uw-unsplash_1.jpg",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "heading": "Become a Dealer",
+            "heading_size": "xl",
+            "subheading": "<p>FIMIC Implement is committed to providing the best possible service to our end users by having a local dealer there to support you. At times attachments may need to be serviced or repaired, and the dealer that sold the product to you is likely to invest more to keep you satisfied. We work very closely with our dealers to provide fast product support so they, in turn, can keep you working! </p>",
+            "text_color": "#fff",
+            "box_align": "middle-center",
+            "content_width": 50,
+            "button_label": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "link": "",
+            "secondary_button_label": "",
+            "secondary_button_type_link": false,
+            "secondary_button_color_scheme": "button-secondary",
+            "secondary_link": "",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_FhYwUH"
+      ],
+      "settings": {
+        "full_width": true,
+        "slide_height": "small",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "animation_type": "slide",
+        "navigation_type_desktop": "dots",
+        "accessibility_info": "",
+        "color_scheme": "background-1",
+        "spacing_top": 0,
+        "spacing_bottom": 0
+      }
+    },
+    "17301614972b948765": {
+      "type": "apps",
+      "blocks": {
+        "hulk_form_builder_form_block_EAzRME": {
+          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": "zwr1vtBwgD0ZfnPw-gqOTw",
+            "form_settings": false,
+            "font_color": "#000000",
+            "size": 14,
+            "input_background_color": "#FFF",
+            "input_background_color_focus": "#F4DADA",
+            "input_border_radius": 1,
+            "input_border_color": "#ebe9e9",
+            "input_border_color_focus": "#2D2727",
+            "input_font_color": "#3D3131",
+            "input_size": 14,
+            "border_color": "#121212",
+            "border_radius": 2,
+            "border": 1,
+            "fill_color": "#EBE9E9",
+            "padding": 35,
+            "form_width": 600,
+            "btn_text": "Submit",
+            "sub_btn_txt_color": "#F3F3F3",
+            "sub_btn_bg_color": "#3F3333",
+            "sub_btn_font_size": 14,
+            "sub_btn_bdr_color": "#FFFFFF",
+            "sub_btn_bdr_rad": 3,
+            "sub_btn_bdr_width": 1,
+            "fonts": "Arial"
+          }
+        }
+      },
+      "block_order": [
+        "hulk_form_builder_form_block_EAzRME"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_G4ffzj",
+    "17301614972b948765"
+  ]
+}

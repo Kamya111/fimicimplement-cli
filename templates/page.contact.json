@@ -1,0 +1,131 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide_heading": false
+      }
+    },
+    "slideshow_Yr9hDb": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_YC9cdm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/farm-land-hay-bails.jpg",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "heading": "Contact us",
+            "heading_size": "xl",
+            "subheading": "<p>For inquiries, partnerships, or to learn more about our smart agricultural solutions, please don’t hesitate to reach out to our dedicated team.<\/p>",
+            "text_color": "#ffffff",
+            "box_align": "middle-center",
+            "content_width": 50,
+            "button_label": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "link": "",
+            "secondary_button_label": "",
+            "secondary_button_type_link": false,
+            "secondary_button_color_scheme": "button-secondary",
+            "secondary_link": "",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_YC9cdm"
+      ],
+      "settings": {
+        "full_width": true,
+        "slide_height": "small",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "animation_type": "slide",
+        "navigation_type_desktop": "dots",
+        "accessibility_info": "",
+        "color_scheme": "background-1",
+        "spacing_top": 0,
+        "spacing_bottom": 0
+      }
+    },
+    "multicolumn_EjzDqc": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_URpQnj": {
+          "type": "column",
+          "settings": {
+            "image_width": 550,
+            "title": "EMAIL",
+            "text": "<p>Email our Hydraulic Cylinder Sales team: <a href=\"mailto:rick@spartanhydraulics.com\" target=\"_blank\" title=\"mailto:rick@spartanhydraulics.com\">rick@spartanhydraulics.com<\/a><\/p><p>Email our Mower and Ag Parts Sales team: <a href=\"mailto:sales@fimicimplement.com\" target=\"_blank\" title=\"mailto:sales@fimicimplement.com\">kenneth@patcoincorporated.com<br\/><br\/><\/a><br\/><br\/><br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KgpC9L": {
+          "type": "column",
+          "settings": {
+            "image_width": 550,
+            "title": "TELEPHONE",
+            "text": "<p><strong>In the United States and Canada:<br\/><br\/><\/strong>Hydraulic Cylinders sales Team: <span style=\"text-decoration:underline\">1-865-755-1101<\/span><br\/><br\/>Mower and Ag Parts sales Team: <span style=\"text-decoration:underline\">1-601-342-5178<\/span><br\/><br\/>Sales and Service phone hours are <strong>8:00 am - 5:30 pm<\/strong> EST, Monday-Friday, excluding major US holidays.<br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DGzbg4": {
+          "type": "column",
+          "settings": {
+            "image_width": 550,
+            "title": "ADDRESS",
+            "text": "<p>At our Laurel distribution location, we have a walk-in counter to purchase website products and for our customers to pick-up orders that have been previously arranged by our customer service team.<\/p><p>FIMIC, LLC<br\/>1965 HWY 184<br\/>Laurel MS 39443 USA<br\/><br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_URpQnj",
+        "column_KgpC9L",
+        "column_DGzbg4"
+      ],
+      "custom_css": [
+        ".card-padded {background-color: #f5f5f5;}"
+      ],
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "columns": 3,
+        "column_alignment": "left",
+        "button_label": "",
+        "button_link": "",
+        "card_type": "padded",
+        "image_ratio": "square",
+        "color_scheme": "background-2",
+        "spacing_top": 64,
+        "spacing_bottom": 64
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Please fill up the form below"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_Yr9hDb",
+    "multicolumn_EjzDqc",
+    "form"
+  ]
+}

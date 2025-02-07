@@ -1,0 +1,156 @@
+<style>
+  .kik_collection_list-{{ section.id }}{
+      padding-top:{{section.settings.padding-top}}px;
+      padding-bottom:{{section.settings.padding-bottom}}px;
+  }
+.kik_collection_list_heading h1{font-size:32px;line-height:41.6px;text-align:center;margin:0 0 45px;font-weight:700}.kik_collection_list_c{display:flex;column-gap:16px;justify-content:space-between}.kik_collection_left,.kik_collection_right{flex:0 0 calc(50% - 8px)}.kik_collection_right{display:flex;flex-direction:column;justify-content:space-between}.kik_collection_item{position:relative;overflow:hidden}.kik_collection_img{position:relative;padding-top:100%}.kik_collection_img img,.kik_collection_info{position:absolute;top:0;left:0;height:100%;width:100%}.kik_collection_img.half-item{padding-top:calc(50% - 8px)}.kik_collection_img img{object-fit:cover}.kik_collection_info{padding:25px;display:flex;flex-direction:column;row-gap:20px;justify-content:flex-end;align-items:flex-start}.kik_collection_info h1{margin:0 0 12px;color:#fff;font-size:24px;line-height:29px;font-weight:800}.kik_collection_info p{color:#fff;font-size:16px;line-height:24px;margin:0}.kik_collection_info a{background:#ca141c;padding:12px 32px;color:#fff;font-size:14px;line-height:21px;font-weight:800}.kik_collection_list_c .button span{position:relative;z-index:3}#MainContent .kik_collection_list_c .button:before{z-index:2}#MainContent .kik_collection_list_c .button:after{z-index:1}@media (max-width:1024px){.kik_collection_info{row-gap:12px}.kik_collection_info h1{font-size:17px;line-height:21px}.kik_collection_info p{font-size:14px;line-height:1.5}}
+  @media (max-width:749px){
+.kik_collection_list-{{ section.id }}{
+      padding-top:{{section.settings.mobile_padding-top}}px;
+      padding-bottom:{{section.settings.mobile_padding-bottom}}px;
+  }
+.kik_collection_list_heading h1{font-size:22px;line-height:28.6px;margin-bottom:32px}.kik_collection_list_c >div:not(:last-child){margin-bottom:16px;}.kik_collection_list_c{row-gap:0px;justify-content:space-between;flex-direction:column}.kik_collection_img.half-item{padding-top:64%}.kik_collection_right > div:not(:last-child){margin-bottom:16px;}.kik_collection_right{row-gap:0px}.kik_collection_info{padding:24px;row-gap:20px}.kik_collection_info h1{font-size:18px;line-height:22px}.kik_collection_info p{font-size:14px;line-height:21px}
+  }
+</style>
+<div class="kik_collection_list kik_collection_list-{{ section.id }} container">
+  <div class="kik_collection_list_heading">
+    <h1>{{ section.settings.heading }}</h1>
+  </div>
+  
+   <div class="kik_collection_list_c">
+     <div class="kik_collection_left">
+     {% for block in section.blocks %}
+        {% if forloop.first %}
+            <div class="kik_collection_item">
+              <div class="kik_collection_img">
+                     <img src="{{ block.settings.image | img_url:"400x400" }}"           
+              alt="{{ block.settings.image.alt }}"
+          srcset="{{ block.settings.image | img_url: '400x400' }} 400w, {{ block.settings.image | img_url: '800x800' }} 800w, {{ block.settings.image | img_url: '1024x1024' }} 1024w" 
+              sizes="(max-width: 600px) 400px, (max-width: 900px) 400px, 1024px" 
+              loading="lazy" width='100%' height="auto">
+              </div>
+              <div class="kik_collection_info">
+                <div class="kik_collection_main">
+                <h1>{{ block.settings.heading }}</h1>
+                <p>{{ block.settings.text }}</p>
+                </div>
+                <a class="button" href="{{ block.settings.link }}"><span>{{ block.settings.button_text }}</span></a>
+              </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+       </div>
+
+         <div class="kik_collection_right">
+     {% for block in section.blocks %}
+        {% if forloop.first %}{% else %}
+            <div class="kik_collection_item ">
+              <div class="kik_collection_img half-item">
+                     <img src="{{ block.settings.image | img_url:"400x400" }}"           
+              alt="{{ block.settings.image.alt }}"
+          srcset="{{ block.settings.image | img_url: '400x400' }} 400w, {{ block.settings.image | img_url: '800x800' }} 800w, {{ block.settings.image | img_url: '1024x1024' }} 1024w" 
+              sizes="(max-width: 600px) 400px, (max-width: 900px) 400px, 1024px" 
+              loading="lazy" width='100%' height="auto">
+              </div>
+                  <div class="kik_collection_info">
+                    <div class="kik_collection_main">
+                   <h1>{{ block.settings.heading }}</h1>
+                    <p>{{ block.settings.text }}</p>
+                    </div>
+                <a class="button" href="{{ block.settings.link }}"><span>{{ block.settings.button_text }}</span></a>
+            </div>
+              </div>
+        {% endif %}
+    {% endfor %}
+       </div>
+   </div>
+</div>
+
+{% schema %}
+{
+  "name": "kik collection list",
+  "tag": "section",
+  "max_blocks": 3,
+    "settings": [
+  {
+      "type": "text",
+      "id": "heading",
+      "label": "heading"
+    },
+          {
+      "type" : "range",
+      "id" : "padding-top",
+      "label" : "padding top",
+      "min" : 0,
+      "max":100,
+      "step":1,
+      "default" :32
+      },
+       {
+      "type" : "range",
+      "id" : "padding-bottom",
+      "label" : "padding bottom",
+      "min" : 0,
+      "max":100,
+      "step":1,
+      "default" :64
+      },
+        {
+      "type" : "range",
+      "id" : "mobile_padding-top",
+      "label" : "mobile padding top",
+      "min" : 0,
+      "max":100,
+      "step":1,
+      "default" :32
+      },
+       {
+      "type" : "range",
+      "id" : "mobile_padding-bottom",
+      "label" : "mobile padding bottom",
+      "min" : 0,
+      "max":100,
+      "step":1,
+      "default" :32
+      },
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "collection",
+      "settings": [
+{
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+         {
+      "type": "url",
+      "id": "link",
+      "label": "link"
+    },
+       {
+      "type": "text",
+      "id": "heading",
+      "label": "heading"
+    },
+         {
+      "type": "textarea",
+      "id": "text",
+      "label": "text"
+    },
+              {
+      "type": "text",
+      "id": "button_text",
+      "label": "button text"
+    }
+  ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "kik collection list"
+    }
+  ]
+}
+{% endschema %}

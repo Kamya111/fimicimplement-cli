@@ -1,0 +1,125 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "features_QmDcTB": {
+      "type": "features",
+      "blocks": {
+        "feature_PcNicL": {
+          "type": "feature",
+          "settings": {
+            "icon": "check",
+            "image": "shopify://shop_images/Comprehensive_Warranty.svg",
+            "title": "Competitive Pricing",
+            "text": ""
+          }
+        },
+        "feature_bR3Fem": {
+          "type": "feature",
+          "settings": {
+            "icon": "check",
+            "image": "shopify://shop_images/Competitive_Pricing.svg",
+            "title": "Comprehensive Warranty",
+            "text": ""
+          }
+        },
+        "feature_JNLQdh": {
+          "type": "feature",
+          "settings": {
+            "icon": "check",
+            "image": "shopify://shop_images/Fast_Shipping.svg",
+            "title": "Fast Shipping",
+            "text": ""
+          }
+        },
+        "feature_z78XVt": {
+          "type": "feature",
+          "settings": {
+            "icon": "user",
+            "title": "customer confidence",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_PcNicL",
+        "feature_bR3Fem",
+        "feature_JNLQdh",
+        "feature_z78XVt"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "auto_rotate": false,
+        "size": "small",
+        "color_scheme": "accent-1",
+        "spacing_top": 16,
+        "spacing_bottom": 16
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-0": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "image": "shopify://shop_images/Logo.png",
+            "link": "",
+            "image_width": 340,
+            "text": "<p>Get in Touch:</p><p>Office: <a href=\"tel:6013425178\" title=\"tel:6013425178\">601-342-5178</a></p><p>Mobile: <a href=\"tel:6014982607\" title=\"tel:6014982607\">601-498-2607</a></p><p>Cylinders: <a href=\"tel:8657551101\" title=\"tel:8657551101\">865-755-1101</a></p>"
+          }
+        },
+        "footer-1": {
+          "type": "menu",
+          "settings": {
+            "title": "TOP Shop",
+            "menu": "kik-shop-footer"
+          }
+        },
+        "footer-2": {
+          "type": "menu",
+          "settings": {
+            "title": "Explore",
+            "menu": "explore"
+          }
+        },
+        "footer-3": {
+          "type": "newsletter",
+          "settings": {
+            "title": "Newsletter",
+            "text": "Subscribe to get all hot deals and news which benefit you most!",
+            "consent_checkbox": false,
+            "consent_text": "<p>I agree to receive marketing emails and special deals.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "footer-2",
+        "footer-3"
+      ],
+      "custom_css": [],
+      "settings": {
+        "payment_enable": true,
+        "show_social": false,
+        "enable_follow_on_shop": true,
+        "color_scheme": "accent-2"
+      }
+    }
+  },
+  "order": [
+    "features_QmDcTB",
+    "footer"
+  ]
+}

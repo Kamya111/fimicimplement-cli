@@ -1,0 +1,165 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide_heading": false
+      }
+    },
+    "slideshow_UrLXpN": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_9e9JmF": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/pexels-tomfisk-8343969_1.jpg",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100%)",
+            "heading": "Frequently Asked Questions",
+            "heading_size": "xl",
+            "subheading": "<p>Find answers to your frequently asked questions about our products, services, and how to get started with FIMIC.</p>",
+            "text_color": "#ffffff",
+            "box_align": "middle-center",
+            "content_width": 50,
+            "button_label": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "link": "",
+            "secondary_button_label": "",
+            "secondary_button_type_link": false,
+            "secondary_button_color_scheme": "button-secondary",
+            "secondary_link": "",
+            "mobile_image": "shopify://shop_images/FAQ.jpg",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_9e9JmF"
+      ],
+      "settings": {
+        "full_width": true,
+        "slide_height": "small",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "animation_type": "slide",
+        "navigation_type_desktop": "dots",
+        "accessibility_info": "",
+        "color_scheme": "background-1",
+        "spacing_top": 0,
+        "spacing_bottom": 0
+      }
+    },
+    "expandable_Q7JNAr": {
+      "type": "expandable",
+      "blocks": {
+        "expandable_eaahbn": {
+          "type": "expandable",
+          "settings": {
+            "heading": "What are your business hours?",
+            "icon": "info",
+            "text": "<p>We are open from 9:00 AM to 5:00 PM Monday through Friday, Central Standard Time, except holidays and weekends.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_C8WLqY": {
+          "type": "expandable",
+          "settings": {
+            "heading": "Is it safe to enter my personal information on your website? ",
+            "icon": "info",
+            "text": "<p>Yes, we use the most up-to-date industry standard SSS (Security Sockets Layer) encryption.<br/></p>",
+            "expanded": false
+          }
+        },
+        "expandable_D8DyaL": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How long will it take for me to receive my order?",
+            "icon": "info",
+            "text": "<p>Most in-stock items are typically shipped within 1-3 business days and deliver typically in 3-7 business days (see above chart for more information).<br/>Heavy or bulky items will ship via freight/truck service and will typically take 8-10 business days for delivery.<br/>Next Day delivery is available for an additional cost.  Please call 601-342-5178  for more information on Next Day delivery, or for timing on shipments to Alaska, Hawaii, and Puerto Rico.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_4KXnp9": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How much do you charge for shipping?",
+            "icon": "info",
+            "text": "<p>Shipping costs are determined by item weight and your zip code.  Once you have entered your shipping information on the checkout page of your order, your shipping total will be calculated and available for review.  If you have any questions about this, please contact our Customer Service representatives at 601-342-5178.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_xqfiyr": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How will my order be delivered?",
+            "icon": "info",
+            "text": "<p>Items under 70 lbs. are typically shipped via UPS Ground (see above chart for more details).<br/>Due to size or weight, some items will be shipped via freight/truck service of our choice (unless you specify otherwise).  You may call 1-601-342-5178 and speak to our Customer Service representatives to confirm special shipping rates and/or provide preferred carrier service details.\"</p>",
+            "expanded": false
+          }
+        },
+        "expandable_WbyJ3U": {
+          "type": "expandable",
+          "settings": {
+            "heading": "Can I order replacement parts for your items?",
+            "icon": "info",
+            "text": "<p>Yes, we sell replacement parts to many of our stocked items.  Look in our technical specifications pages in the product description pages to see if the parts list breakdown you need is available.  If the part you need is not available for online purchasing, simply call our Customer Service representatives at 1-601-342-5178 to see if this replacement part is available for ordering.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_fgkihR": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How do I find my nearest dealer?",
+            "icon": "info",
+            "text": "<p>Give us a call at 1-601-342-5178 and we will provide you with your nearest dealer location/information.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_TfDwDg": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How do I become a FIMIC dealer?",
+            "icon": "info",
+            "text": "<p>If you are interested in becoming an authorized FIMIC distributor/dealer, call us at 1-601-342-5178 and we will send you the necessary information and requirements in order to become one</p>",
+            "expanded": false
+          }
+        }
+      },
+      "block_order": [
+        "expandable_eaahbn",
+        "expandable_C8WLqY",
+        "expandable_D8DyaL",
+        "expandable_4KXnp9",
+        "expandable_xqfiyr",
+        "expandable_WbyJ3U",
+        "expandable_fgkihR",
+        "expandable_TfDwDg"
+      ],
+      "settings": {
+        "narrow": true,
+        "heading": "",
+        "subheading": "",
+        "heading_alignment": "left",
+        "color_scheme": "background-1",
+        "spacing_top": 90,
+        "spacing_bottom": 90
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_UrLXpN",
+    "expandable_Q7JNAr"
+  ]
+}

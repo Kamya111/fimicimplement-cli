@@ -1,0 +1,76 @@
+/* Search Page */
+.template-search .template-search-search-bar predictive-search.header-search-global-component form.search .field {
+    display: flex;
+    gap: 10px;
+}
+.template-search .template-search-search-bar input#search-input {
+    border-radius: 0;
+}
+.template-search .template-search-search-bar button.button {
+    border-radius: 0 !important;
+    white-space: nowrap;
+    font-size: 14px !important;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: -3px;
+}
+/* Chat box app */
+.template-product div#tidio-chat iframe#tidio-chat-iframe {
+    bottom: 125px !important;
+}
+
+/* Global */
+body.mobile-menu-open div#tidio-chat, body.mobile-menu-open div#tidio-chat iframe#tidio-chat-iframe,
+body.mobile-menu-open .needsclick {
+    z-index: 9 !important;
+}
+facet-filters-form div#CollectionActions .collection-actions-main button.button.button-form-input::after,
+facet-filters-form div#CollectionActions .collection-actions-main button.button.button-form-input::before {
+    content: "";
+    background: transparent;
+}
+.section-header:not(.section-header-sticky) .predictive-search {
+    padding: 10px;
+}
+@media only screen and (max-width: 1024px){
+ .head-slot-item .dropdown.dropdown-right.dropdown-down .dropdown-toggle {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .header_top .header-search-global .header-search-global-form-wrap button.button {
+        border-radius: 0;
+    }
+    .header_top .header-search-global .header-search-global-form-wrap input#header-global-search-input {
+        border-radius: 0;
+    }
+    facet-filters-form div#CollectionActions .collection-actions-main select#collection-sort-order,
+    facet-filters-form div#CollectionActions .collection-actions-main button.button.button-form-input{
+        border-radius: 0;
+        border: 1px solid #999999
+    }
+    facet-filters-form div#CollectionActions .collection-actions-main button.button.button-form-input::after,
+facet-filters-form div#CollectionActions .collection-actions-main button.button.button-form-input::before {
+    content: "";
+    background: transparent;
+}
+}
+
+@media only screen and (max-width: 749px){
+    .template-search .facets-wrap div#ProductGridContainer ul#product-grid {
+        gap: 8px;
+        border-left: unset;
+    }
+
+    .template-search .facets-wrap div#ProductGridContainer ul#product-grid li.grid-item {
+        width: calc( 50% - 4px);
+    }
+
+    .template-search .facets-wrap div#ProductGridContainer ul#product-grid li.grid-item product-card {
+        border-top: unset;
+        border-right: unset;
+        border-bottom: unset;
+    }
+
+}

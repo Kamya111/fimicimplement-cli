@@ -1,0 +1,207 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "hide_heading": false
+      }
+    },
+    "slideshow_AVGQWT": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_xHqErg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_3653.JPG",
+            "overlay_background": "linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65) 100%)",
+            "heading": "Warranty",
+            "heading_size": "lg",
+            "subheading": "<p>Our warranty offers customers the flexibility to return or exchange eligible items within 30 days of purchase. All returns must be in unused and resellable condition with original packaging and tags. If you receive a damaged item, please contact us within 7 days for assistance. We offer a variety of refund options, including store credit or a refund to your original payment method. For detailed return instructions and to initiate the return process, please visit our returns center.</p>",
+            "text_color": "#ffffff",
+            "box_align": "bottom-left",
+            "content_width": 50,
+            "button_label": "",
+            "button_type_link": false,
+            "button_color_scheme": "button-primary",
+            "link": "",
+            "secondary_button_label": "",
+            "secondary_button_type_link": false,
+            "secondary_button_color_scheme": "button-secondary",
+            "secondary_link": "",
+            "mobile_heading_size": "md",
+            "mobile_box_align": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "slide_xHqErg"
+      ],
+      "settings": {
+        "full_width": true,
+        "slide_height": "three-quarters",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "animation_type": "slide",
+        "navigation_type_desktop": "dots",
+        "accessibility_info": "",
+        "color_scheme": "background-1",
+        "spacing_top": 0,
+        "spacing_bottom": 0
+      }
+    },
+    "rich_text_TxAFhB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FJYtmL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Claim Warranty",
+            "heading_size": "md"
+          }
+        },
+        "button_bfLbj4": {
+          "type": "button",
+          "settings": {
+            "button_label": "Make Claim",
+            "button_link": "https://fimicimplement.com/pages/claim-warranty?view=claim-warranty&preview_theme_id=138040705177"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FJYtmL",
+        "button_bfLbj4"
+      ],
+      "settings": {
+        "narrow": true,
+        "overlay_background": "",
+        "alignment": "center",
+        "limit_height": false,
+        "color_scheme": "background-1",
+        "spacing_top": 90,
+        "spacing_bottom": 90
+      }
+    },
+    "expandable_jYnNEf": {
+      "type": "expandable",
+      "blocks": {
+        "expandable_X9zmtn": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How do I return?",
+            "icon": "info",
+            "text": "<ul><li>Visit our returns center</li><li>Enter your order number and email address to start</li><li>Follow the instructions and select the items you want to return</li><li>Once your request is approved, you will get a confirmation email with shipping guidelines</li></ul>",
+            "expanded": false
+          }
+        },
+        "expandable_CjHmaL": {
+          "type": "expandable",
+          "settings": {
+            "heading": "What items are returnable? ",
+            "icon": "info",
+            "text": "<ul><li>Within 30 days from the date of purchase</li><li>In unused and resellable condition</li><li>In the original packaging with all the tags intact</li></ul>",
+            "expanded": false
+          }
+        },
+        "expandable_RQr8EG": {
+          "type": "expandable",
+          "settings": {
+            "heading": "What items are non-refundable? ",
+            "icon": "info",
+            "text": "<p>The following items cannot be returned:</p><ul><li>Gift cards</li><li>Discounted items (if applicable)</li></ul>",
+            "expanded": false
+          }
+        },
+        "expandable_cGeN94": {
+          "type": "expandable",
+          "settings": {
+            "heading": "The item I received is damaged!",
+            "icon": "info",
+            "text": "<p>If the purchased product is faulty, reach out to us within 7 days of the delivered date.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_tTwgMG": {
+          "type": "expandable",
+          "settings": {
+            "heading": "Can the items be exchanged?",
+            "icon": "info",
+            "text": "<p>We allow the exchange of purchased items for selectable variants. Once the exchange request is approved, the replaced item will be shipped to you.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_datqc6": {
+          "type": "expandable",
+          "settings": {
+            "heading": "What are the refund options?",
+            "icon": "info",
+            "text": "<p>The following refund options are supported:</p><ul><li>Refund to the original payment method</li><li>Refund to store credit (if applicable)</li></ul>",
+            "expanded": false
+          }
+        },
+        "expandable_YnfQFR": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How do I ship back the items?",
+            "icon": "info",
+            "text": "<p>For instructions on how to ship the returned products, refer to the email received after placing the return request.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_6VznkM": {
+          "type": "expandable",
+          "settings": {
+            "heading": "How soon will I get my refund?",
+            "icon": "info",
+            "text": "<p>Once your returned item is received and inspected, you will be notified via an email. You will also be informed about the approval or rejection of your refund request. If approved, the refund request will be processed within 5 - 7 working days after approval.</p>",
+            "expanded": false
+          }
+        },
+        "expandable_8KkHAa": {
+          "type": "expandable",
+          "settings": {
+            "heading": "My question is not addressed...",
+            "icon": "info",
+            "text": "<p>If you have any queries regarding return or refund, reach out to us.</p>",
+            "expanded": false
+          }
+        }
+      },
+      "block_order": [
+        "expandable_X9zmtn",
+        "expandable_CjHmaL",
+        "expandable_RQr8EG",
+        "expandable_cGeN94",
+        "expandable_tTwgMG",
+        "expandable_datqc6",
+        "expandable_YnfQFR",
+        "expandable_6VznkM",
+        "expandable_8KkHAa"
+      ],
+      "settings": {
+        "narrow": true,
+        "heading": "FAQ",
+        "subheading": "",
+        "heading_alignment": "left",
+        "color_scheme": "background-1",
+        "spacing_top": 90,
+        "spacing_bottom": 90
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_AVGQWT",
+    "rich_text_TxAFhB",
+    "expandable_jYnNEf"
+  ]
+}
